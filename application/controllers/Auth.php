@@ -50,7 +50,7 @@ class Auth extends CI_Controller
         if ($check_password) {
           // set session
           $session = array(
-            'id_user' => $user->id_user,
+            'user_id' => $user->id,
             'first_name' => $user->first_name,
             'last_name' => $user->last_name,
             'email' => $user->email,

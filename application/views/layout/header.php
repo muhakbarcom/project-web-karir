@@ -69,7 +69,7 @@
         <ul>
           <li><a href="<?= base_url(); ?>" class="<?php echo ($title == "Home") ? "active" : ""; ?>">Home</a></li>
           <li><a href="<?= base_url('artikel'); ?>" class="<?php echo ($title == "Artikel") ? "active" : ""; ?>">Artikel</a></li>
-          <li><a href="<?= base_url('video'); ?>" class="<?php echo ($title == "Video") ? "active" : ""; ?>">Video</a></li>
+          <li><a href="<?= base_url('videos'); ?>" class="<?php echo ($title == "Video") ? "active" : ""; ?>">Video</a></li>
           <!-- konsultasi -->
           <?php
           if ($this->akbr_auth->is_logged_in()) {
@@ -86,17 +86,20 @@
 
           <!-- if login and is admin -->
           <?php if ($this->akbr_auth->is_logged_in() && $this->akbr_auth->is_admin()) : ?>
-            <li><a href="<?= base_url('Artikel/list'); ?>" class="<?php echo ($title == "Kelola Artikel") ? "active" : ""; ?>">Kelola Artikel</a></li>
-            <li><a href="<?= base_url('Video/list'); ?>" class="<?php echo ($title == "Kelola Video") ? "active" : ""; ?>">Kelola Video</a></li>
-            <li><a href="<?= base_url('Users'); ?>" class="<?php echo ($title == "Kelola User") ? "active" : ""; ?>">Kelola User</a></li>
-
+            <li class="dropdown"><a href="#" class="<?php echo ($title == "Kelola Artikel" || $title == "Kelola Video" || $title == "Kelola User") ? "active" : ""; ?>"><span>Kelola Data</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+              <ul>
+                <li><a href="<?= base_url('Artikel/list'); ?>">Kelola Artikel</a></li>
+                <li><a href="<?= base_url('Videos/list'); ?>">Kelola Video</a></li>
+                <li><a href="<?= base_url('Users'); ?>">Kelola User</a></li>
+              </ul>
+            </li>
           <?php endif ?>
           <!-- end if login and is admin -->
 
           <?php
           if ($this->akbr_auth->is_logged_in()) {
           ?>
-            <li><a style="background-color: #00796b ;" href="#" class="rounded px-3 py-1"><i class="bi bi-person-circle"></i> &nbsp; <?= $this->akbr_auth->get_user_data(); ?></a> </li>
+            <li><a style="background-color: #00796b ;" href="<?= base_url('Profile'); ?>" class="rounded px-3 py-1"><i class="bi bi-person-circle"></i> &nbsp; <?= $this->akbr_auth->get_user_data(); ?></a> </li>
             <li><a class="btn btn-danger  text-light px-3 py-1" href="<?= base_url('Auth/logout'); ?>">Logout</a></li>
           <?php } else { ?>
             <li><a class="btn btn-dark text-light px-3 py-1" href="<?= base_url('Auth'); ?>">Login</a></li>

@@ -5,18 +5,13 @@
       <div class="col-md-6">
         <div class="card">
           <div class="card-header">
-            <h3>Kelola User</h3>
+            <h3>Profile</h3>
           </div>
           <div class="card-body">
-          <?php if ($this->session->flashdata('error')) : ?>
-              <div class="alert alert-danger" role="alert">
-                <?= $this->session->flashdata('error'); ?>
+            <?php if ($this->session->flashdata('message')) : ?>
+              <div class="alert alert-info" role="alert">
+                <?= $this->session->flashdata('message'); ?>
               </div>
-            <?php elseif ($this->session->flashdata('success')) : ?>
-              <div class="alert alert-success" role="alert">
-                <?= $this->session->flashdata('success'); ?>
-              </div>
-            <?php endif ?>
             <?php endif ?>
             <?php echo form_open($action); ?>
 
@@ -26,7 +21,6 @@
                   <label for="">Nama Depan</label> <br />
                   <input type="text" name="first_name" id="first_name" class="form-control" required value="<?= $first_name; ?>">
                   <div id="emailHelp" class="form-text text-danger"><?php echo form_error('first_name'); ?></div>
-
                 </div>
               </div>
               <div class="col">
@@ -50,27 +44,16 @@
               <div class="col">
                 <div class="form-group">
                   <label for="">Password</label> <br />
-                  <input type="password" name="password" id="password" class="form-control" required>
+                  <input type="password" name="password" id="password" class="form-control">
                   <div id="emailHelp" class="form-text text-danger"><?php echo form_error('password'); ?></div>
                 </div>
               </div>
               <div class="col">
                 <div class="form-group">
                   <label for="">Konfirmasi Password</label> <br />
-                  <input type="password" name="password_confirm" id="password_confirm" class="form-control" required>
+                  <input type="password" name="password_confirm" id="password_confirm" class="form-control">
                   <div id="emailHelp" class="form-text text-danger"><?php echo form_error('password_confirm'); ?></div>
                 </div>
-              </div>
-            </div>
-
-            <div class="row mb-3">
-              <div class="form-group">
-                <label for="roles">Hak Akses</label>
-                <select class="form-control" name="role" id="role">
-                  <?php foreach ($roles as $role) : ?>
-                    <option value="<?= $role->id; ?>"><?= $role->name; ?></option>
-                  <?php endforeach; ?>
-                </select>
               </div>
             </div>
 

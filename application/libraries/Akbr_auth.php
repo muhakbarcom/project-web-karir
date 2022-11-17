@@ -54,8 +54,8 @@ class Akbr_auth
   public function user($id = NULL)
   {
     // if no id was passed use the current users id
-    $id = isset($id) ? $id : $this->session->userdata('user_id');
-
+    $id = isset($id) ? $id : $this->CI->session->userdata('user_id');
+    $this->CI->load->model('Akbr_users_model');
     $result = $this->CI->Akbr_users_model->get_by_id($id);
 
     return $result;
