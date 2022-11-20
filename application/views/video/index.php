@@ -4,7 +4,7 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>Video</h2>
+        <h2>Rekomendasi Karir</h2>
         <p></p>
       </div>
 

@@ -20,7 +20,7 @@ class Videos extends CI_Controller
   {
     $videos = $this->Videos_model->get_all();
     $data = array(
-      'title' => $this->module,
+      'title' => 'Rekomendasi Karir',
       'titleapp' => config_item('title'),
       'descapp' => config_item('desc'),
       'socmed' => config_item('socmed'),

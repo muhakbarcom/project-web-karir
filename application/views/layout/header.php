@@ -69,7 +69,7 @@
         <ul>
           <li><a href="<?= base_url(); ?>" class="<?php echo ($title == "Home") ? "active" : ""; ?>">Home</a></li>
           <li><a href="<?= base_url('artikel'); ?>" class="<?php echo ($title == "Artikel") ? "active" : ""; ?>">Artikel</a></li>
-          <li><a href="<?= base_url('videos'); ?>" class="<?php echo ($title == "Video") ? "active" : ""; ?>">Video</a></li>
+          <li><a href="<?= base_url('videos'); ?>" class="<?php echo ($title == "Video") ? "active" : ""; ?>">Rekomendasi Karir</a></li>
           <!-- konsultasi -->
           <?php
           if ($this->akbr_auth->is_logged_in()) {
