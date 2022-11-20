@@ -31,6 +31,17 @@ class Artikel_model extends CI_Model
     return $this->db->get($this->table)->result();
   }
 
+  function get_articles($limit, $start, $search = null)
+  {
+    if ($search != null) {
+      $this->db->or_like('judul', $search);
+      $this->db->or_like('kategori', $search);
+    }
+    $this->db->order_by($this->id, $this->order);
+    $this->db->limit($limit, $start);
+    return $this->db->get($this->table)->result();
+  }
+
   // get data by id
   function get_by_id($id)
   {

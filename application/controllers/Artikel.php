@@ -120,6 +120,33 @@ class Artikel extends CI_Controller
     }
   }
 
+  function get_articles()
+  {
+    if (isset($_POST["limit"], $_POST["start"])) {
+      $limit = $_POST["limit"];
+      $start = $_POST["start"];
+      if ($_POST["search"] != '') {
+        $search = $_POST["search"];
+      } else {
+        $search = null;
+      }
+      $result = $this->artikel_model->get_articles($limit, $start, $search);
+
+      foreach ($result as $row) {
+        $output[] = array(
+          'id' => $row->id,
+          'judul' => $row->judul,
+          'isi' => $row->isi,
+          'kategori' => $row->kategori,
+          'tanggal' => $row->tanggal,
+          'thumb' => get_thumb_articles($row->id),
+        );
+      }
+      echo json_encode($output);
+    }
+  }
+
+
   function upload_img_summernote()
   {
     if ($_FILES['file']['name']) {

@@ -18,17 +18,79 @@ class Videos extends CI_Controller
 
   public function index()
   {
-    $videos = $this->Videos_model->get_all();
+    $this->load->library('pagination');
+
+    //konfigurasi pagination
+    $config['base_url'] = site_url('videos/index'); //site url
+    $config['total_rows'] = $this->db->count_all('videos'); //total row
+    $config['per_page'] = 6;  //show record per halaman
+    $config["uri_segment"] = 3;  // uri parameter
+    $choice = $config["total_rows"] / $config["per_page"];
+    $config["num_links"] = floor($choice);
+
+    // Membuat Style pagination untuk BootStrap v4
+    $config['first_link']       = 'First';
+    $config['last_link']        = 'Last';
+    $config['next_link']        = '>>';
+    $config['prev_link']        = '<<';
+    $config['full_tag_open']    = '<div class="blog-pagination"><ul class="justify-content-center">';
+    $config['full_tag_close']   = '</ul></div>';
+    $config['num_tag_open']     = '<li><a href="#">';
+    $config['num_tag_close']    = '</a></li>';
+    $config['cur_tag_open']     = '<li class="active"><a href="#">';
+    $config['cur_tag_close']    = '</a></li>';
+    $config['next_tag_open']    = '<li>';
+    $config['next_tagl_close']  = '</li>';
+    $config['prev_tag_open']    = '<li>';
+    $config['prev_tagl_close']  = '</li>';
+    $config['first_tag_open']   = '<li>';
+    $config['first_tagl_close'] = '</li>';
+    $config['last_tag_open']    = '<li>';
+    $config['last_tagl_close']  = '</li>';
+
+    $this->pagination->initialize($config);
+
+    $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+    $search_data = $this->input->get('search');
+    $limit = $config['per_page'];
+    $start = $data['page'];
+    $videos = $this->Videos_model->get_videos($limit, $start, $search_data);
     $data = array(
       'title' => $this->module,
       'titleapp' => config_item('title'),
       'descapp' => config_item('desc'),
       'socmed' => config_item('socmed'),
       'videos' => $videos,
+      'search_data' => set_value('search', $search_data),
     );
+    $data['pagination'] = $this->pagination->create_links();
     $this->load->view('layout/header', $data);
     $this->load->view($this->module . '/index', $data);
     $this->load->view('layout/footer', $data);
+  }
+
+  function get_videos()
+  {
+    if (isset($_POST["limit"], $_POST["start"])) {
+      $limit = $_POST["limit"];
+      $start = $_POST["start"];
+      if ($_POST["search"] != '') {
+        $search = $_POST["search"];
+      } else {
+        $search = null;
+      }
+      $result = $this->Videos_model->get_videos($limit, $start, $search);
+
+      foreach ($result as $row) {
+        $output[] = array(
+          'id' => $row->id,
+          'video_name' => $row->video_name,
+          'video_url' => $row->video_url,
+          'video_thumb' => get_youtube_thumb($row->video_url)
+        );
+      }
+      echo json_encode($output);
+    }
   }
 
   public function list()

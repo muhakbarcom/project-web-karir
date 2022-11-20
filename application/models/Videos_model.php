@@ -17,6 +17,17 @@ class Videos_model extends CI_Model
   function get_all()
   {
     $this->db->order_by($this->id, $this->order);
+
+    return $this->db->get($this->table)->result();
+  }
+
+  function get_videos($limit, $start, $search = null)
+  {
+    if ($search != null) {
+      $this->db->or_like('video_name', $search);
+    }
+    $this->db->order_by($this->id, $this->order);
+    $this->db->limit($limit, $start);
     return $this->db->get($this->table)->result();
   }
 
