@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') or exit('No direct script access allowed');
+//defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------
@@ -47,9 +47,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 |				'ssl_key'    - Path to the private key file
 |				'ssl_cert'   - Path to the public key certificate file
 |				'ssl_ca'     - Path to the certificate authority file
-|				'ssl_capath' - Path to a directory containing trusted CA certificates in PEM format
+|				'ssl_capath' - Path to a directory containing trusted CA certificats in PEM format
 |				'ssl_cipher' - List of *allowed* ciphers to be used for the encryption, separated by colons (':')
-|				'ssl_verify' - TRUE/FALSE; Whether verify the server certificate or not
+|				'ssl_verify' - TRUE/FALSE; Whether verify the server certificate or not ('mysqli' only)
 |
 |	['compress'] Whether or not to use client compression (MySQL only)
 |	['stricton'] TRUE/FALSE - forces 'Strict Mode' connections
@@ -73,12 +73,27 @@ defined('BASEPATH') or exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+$whitelist = array(
+	'127.0.0.1',
+	'localhost',
+	'::1'
+);
+if (in_array($_SERVER['REMOTE_ADDR'], $whitelist)) {
+	$u_db = 'root';
+	$p_db = '';
+	$n_db = 'project-web-karir';
+} else {
+	$u_db = 'carw3664_root';
+	$p_db = '&Lyrr~z19E~A';
+	$n_db = 'carw3664_project';
+}
+
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'project-web-karir',
+	'username' => $u_db,
+	'password' => $p_db,
+	'database' => $n_db,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

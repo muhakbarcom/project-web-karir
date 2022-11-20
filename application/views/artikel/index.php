@@ -1,198 +1,57 @@
 <main id="main">
 
-  <!-- ======= Breadcrumbs ======= -->
-  <div class="breadcrumbs">
-    <div class="page-header d-flex align-items-center" style="background-image: url('');">
-      <div class="container position-relative">
-        <div class="row d-flex justify-content-center">
-          <div class="col-lg-6 text-center">
-            <h2>Blog</h2>
-            <p>Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <nav>
-      <div class="container">
-        <ol>
-          <li><a href="index.html">Home</a></li>
-          <li>Blog</li>
-        </ol>
-      </div>
-    </nav>
-  </div><!-- End Breadcrumbs -->
 
   <!-- ======= Blog Section ======= -->
   <section id="blog" class="blog">
     <div class="container" data-aos="fade-up">
+      <div class="row">
+        <form action="" method="GET">
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2" name="search" value="<?= $search_data; ?>">
+            <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i class="bi bi-search"></i></button>
+          </div>
+        </form>
+      </div>
 
       <div class="row gy-4 posts-list">
 
-        <div class="col-xl-4 col-md-6">
-          <article>
+        <?php foreach ($articles as $article) : ?>
+          <div class="col-xl-4 col-md-6">
+            <article>
 
-            <div class="post-img">
-              <img src="assets-impact/img/blog/blog-1.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Politics</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="assets-impact/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author-list">Maria Doe</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Jan 1, 2022</time>
-                </p>
+              <div class="post-img">
+                <img src="<?= base_url('assets/uploads/artikel/' . $article->gambar); ?>" alt="" class="img-fluid" width="100%">
               </div>
-            </div>
 
-          </article>
-        </div><!-- End post list item -->
+              <p class="post-category"><?= $article->kategori; ?></p>
 
-        <div class="col-xl-4 col-md-6">
-          <article>
+              <h2 class="title">
+                <a href="<?= base_url('artikel/detail/' . $article->id); ?>"><?= $article->judul; ?></a>
+              </h2>
 
-            <div class="post-img">
-              <img src="assets-impact/img/blog/blog-2.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Sports</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="assets-impact/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author-list">Allisa Mayer</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Jun 5, 2022</time>
-                </p>
+              <div class="d-flex align-items-center">
+                <img src="<?= base_url('assets/img/profile/default.png'); ?>" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author-list">Admin</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01"><?= $article->tanggal; ?></time>
+                  </p>
+                </div>
               </div>
-            </div>
-
-          </article>
-        </div><!-- End post list item -->
-
-        <div class="col-xl-4 col-md-6">
-          <article>
-
-            <div class="post-img">
-              <img src="assets-impact/img/blog/blog-3.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Entertainment</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="assets-impact/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author-list">Mark Dower</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Jun 22, 2022</time>
-                </p>
-              </div>
-            </div>
-
-          </article>
-        </div><!-- End post list item -->
-
-        <div class="col-xl-4 col-md-6">
-          <article>
-
-            <div class="post-img">
-              <img src="assets-impact/img/blog/blog-4.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Sports</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Non rem rerum nam cum quo minus olor distincti</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="assets-impact/img/blog/blog-author-4.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author-list">Lisa Neymar</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Jun 30, 2022</time>
-                </p>
-              </div>
-            </div>
-
-          </article>
-        </div><!-- End post list item -->
-
-        <div class="col-xl-4 col-md-6">
-          <article>
-
-            <div class="post-img">
-              <img src="assets-impact/img/blog/blog-5.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Politics</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Accusamus quaerat aliquam qui debitis facilis consequatur</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="assets-impact/img/blog/blog-author-5.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author-list">Denis Peterson</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Jan 30, 2022</time>
-                </p>
-              </div>
-            </div>
-
-          </article>
-        </div><!-- End post list item -->
-
-        <div class="col-xl-4 col-md-6">
-          <article>
-
-            <div class="post-img">
-              <img src="assets-impact/img/blog/blog-6.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Entertainment</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Distinctio provident quibusdam numquam aperiam aut</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="assets-impact/img/blog/blog-author-6.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author-list">Mika Lendon</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Feb 14, 2022</time>
-                </p>
-              </div>
-            </div>
-
-          </article>
-        </div><!-- End post list item -->
+            </article>
+          </div><!-- End post list item -->
+        <?php endforeach ?>
 
       </div><!-- End blog posts list -->
 
-      <div class="blog-pagination">
+      <!-- <div class="blog-pagination">
         <ul class="justify-content-center">
           <li><a href="#">1</a></li>
           <li class="active"><a href="#">2</a></li>
           <li><a href="#">3</a></li>
         </ul>
-      </div><!-- End blog pagination -->
+      </div> -->
+      <!-- End blog pagination -->
 
     </div>
   </section><!-- End Blog Section -->
