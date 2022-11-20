@@ -20,7 +20,8 @@
             <article>
 
               <div class="post-img">
-                <img src="<?= base_url('assets/uploads/artikel/' . $article->gambar); ?>" alt="" class="img-fluid" width="100%">
+                <?php echo get_thumb_articles($article->id); ?>
+                <!-- <img src="<?= base_url('assets/uploads/artikel/' . $article->gambar); ?>" alt="" class="img-fluid" width="100%"> -->
               </div>
 
               <p class="post-category"><?= $article->kategori; ?></p>

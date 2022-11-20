@@ -7,9 +7,8 @@ $config['admin_id'] = '1';
 $config['default_role_id'] = '2';
 
 $config['kategori_artikel'] = array(
-  '1' => 'Video',
-  '2' => 'Artikel',
-  '3' => 'Kajian',
-  '4' => 'Berita',
-  '5' => 'Pengumuman'
+  '1' => 'PTN',
+  '2' => 'PTS',
+  '3' => 'Kedinasan',
+  '4' => 'Lowongan Kerja'
 );

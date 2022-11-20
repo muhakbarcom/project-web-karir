@@ -6,7 +6,7 @@
       </div>
       <div class="card-body">
         <div class="mb-3">
-          <a href="<?= base_url('videos/create'); ?>" class="btn btn-primary btn-sm"><i class="bi bi-plus-circle"></i> Tambah Video</a>
+          <a href="<?= base_url('videos/create'); ?>" class="btn btn-primary btn-sm"><i class="bi bi-plus-circle"></i> Tambah Video Rekomendasi Karir</a>
         </div>
         <?php if ($this->session->flashdata('error')) : ?>
           <div class="alert alert-danger" role="alert">

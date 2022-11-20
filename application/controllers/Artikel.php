@@ -68,7 +68,6 @@ class Artikel extends CI_Controller
       'judul' => set_value('judul'),
       'kategori' => set_value('kategori'),
       'isi' => set_value('isi'),
-      'gambar' => set_value('gambar'),
       'action' => site_url($this->className . '/create_action'),
       'kategori_artikel' => config_item('kategori_artikel'),
     );
@@ -91,34 +90,71 @@ class Artikel extends CI_Controller
       $kategori = $this->input->post('kategori', TRUE);
       $tanggal = date('Y-m-d');
 
-      // if there is no file uploaded
-      if (empty($_FILES['gambar']['name'])) {
-        $gambar = 'default.jpg';
-      } else {
-        $config['upload_path']          = './assets/uploads/artikel/';
-        $config['allowed_types']        = 'gif|jpg|png';
-        $config['max_size']             = 2048;
-        $config['file_name']            = 'artikel-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
-        $this->load->library('upload', $config);
-        if (!$this->upload->do_upload('gambar')) {
-          $this->session->set_flashdata('error', $this->upload->display_errors());
-          redirect(site_url($this->className . '/create'));
-        } else {
-          $gambar = $this->upload->data('file_name');
-        }
-      }
+      // // if there is no file uploaded
+      // if (empty($_FILES['gambar']['name'])) {
+      //   $gambar = 'default.jpg';
+      // } else {
+      //   $config['upload_path']          = './assets/uploads/artikel/';
+      //   $config['allowed_types']        = 'gif|jpg|png';
+      //   $config['max_size']             = 2048;
+      //   $config['file_name']            = 'artikel-' . date('ymd') . '-' . substr(md5(rand()), 0, 10);
+      //   $this->load->library('upload', $config);
+      //   if (!$this->upload->do_upload('gambar')) {
+      //     $this->session->set_flashdata('error', $this->upload->display_errors());
+      //     redirect(site_url($this->className . '/create'));
+      //   } else {
+      //     $gambar = $this->upload->data('file_name');
+      //   }
+      // }
       $data = array(
         'judul' => $judul,
         'isi' => $isi,
         'kategori' => $kategori,
         'tanggal' => $tanggal,
-        'gambar' => $gambar,
       );
 
       $this->artikel_model->insert($data);
 
       $this->session->set_flashdata('success', 'Success to create ' . $this->module . ' data');
       redirect(site_url($this->className . '/list'));
+    }
+  }
+
+  function upload_img_summernote()
+  {
+    if ($_FILES['file']['name']) {
+      if (!$_FILES['file']['error']) {
+        $name = md5(rand(100, 200));
+        $ext = explode('.', $_FILES['file']['name']);
+        $filename = $name . '.' . $ext[1];
+        $destination = 'assets/uploads/artikel/' . $filename; //change this directory
+        $location = $_FILES["file"]["tmp_name"];
+        move_uploaded_file($location, $destination);
+        $response = array(
+          'status' => 'success',
+          'message' => 'Image uploaded successfully',
+          'url' => base_url($destination),
+          'file_name' => $filename
+        );
+        echo json_encode($response);
+      } else {
+        $message = 'Ooops!  Your upload triggered the following error:  ' . $_FILES['file']['error'];
+        $response = array(
+          'status' => 'fail',
+          'message' => $message,
+        );
+        echo json_encode($response);
+      }
+    }
+  }
+
+
+  function delete_img_summernote()
+  {
+    $src = $this->input->post('src'); // $src = $_POST['src'];
+    $file_name = str_replace(base_url(), '', $src); // striping host to get relative path
+    if (unlink($file_name)) {
+      echo 'File Delete Successfully';
     }
   }
 
@@ -132,7 +168,6 @@ class Artikel extends CI_Controller
       'socmed' => config_item('socmed'),
       'judul' => $artikel->judul,
       'kategori' => $artikel->kategori,
-      'gambar' => $artikel->gambar,
       'isi' => $artikel->isi,
       'id' => $artikel->id,
       'kategori_artikel' => config_item('kategori_artikel'),
@@ -152,8 +187,10 @@ class Artikel extends CI_Controller
     if (isset($_POST) && !empty($_POST)) {
       if ($this->form_validation->run() === TRUE) {
         $data = array(
-          'artikel_name' => $this->input->post('artikel_name', TRUE),
-          'artikel_url' => $this->input->post('artikel_url', TRUE),
+          'judul' => $this->input->post('judul', TRUE),
+          'kategori' => $this->input->post('kategori', TRUE),
+          // 'gambar' => $this->input->post('gambar', TRUE),
+          'isi' => $this->input->post('isi', TRUE),
         );
         // check to see if we are updating the user
         if ($this->artikel_model->update($id, $data)) {

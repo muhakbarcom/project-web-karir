@@ -70,150 +70,29 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>Rekomendasi Artikel</h2>
-        <p></p>
+        <a href="<?= base_url('videos'); ?>">
+          <h2>Rekomendasi Karir</h2>
+        </a>
       </div>
 
       <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order" data-aos="fade-up" data-aos-delay="100">
 
-        <div>
-          <ul class="portfolio-flters">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">App</li>
-            <li data-filter=".filter-product">Product</li>
-            <li data-filter=".filter-branding">Branding</li>
-            <li data-filter=".filter-books">Books</li>
-          </ul><!-- End Portfolio Filters -->
-        </div>
 
         <div class="row gy-4 portfolio-container">
+          <?php foreach ($data_videos as $video) : ?>
 
-          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-
-              <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"><img src="<?= base_url() ?>/assets-impact/img/portfolio/app-1.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">App 1</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
+            <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+              <div class="portfolio-wrap">
+                <a href="<?= $video->video_url; ?>" class="glightbox play-btn"><img src="<?= get_youtube_thumb($video->video_url); ?>" class="img-fluid" alt=""></a>
+                <div class="portfolio-info">
+                  <h4><a href="<?= $video->video_url; ?>" title="More Details"><?= $video->video_name; ?></a></h4>
+                </div>
               </div>
             </div>
-          </div><!-- End Portfolio Item -->
 
-          <div class="col-xl-4 col-md-6 portfolio-item filter-product">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/product-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/product-1.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">Product 1</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/branding-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/branding-1.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">Branding 1</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-books">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/books-1.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/books-1.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">Books 1</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/app-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/app-2.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">App 2</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-product">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/product-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/product-2.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">Product 2</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/branding-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/branding-2.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">Branding 2</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-books">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/books-2.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/books-2.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">Books 2</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/app-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/app-3.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">App 3</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-product">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/product-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/product-3.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">Product 3</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-branding">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/branding-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/branding-3.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">Branding 3</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-books">
-            <div class="portfolio-wrap">
-              <a href="<?= base_url() ?>/assets-impact/img/portfolio/books-3.jpg" data-gallery="portfolio-gallery-app" class="glightbox"><img src="<?= base_url() ?>/assets-impact/img/portfolio/books-3.jpg" class="img-fluid" alt=""></a>
-              <div class="portfolio-info">
-                <h4><a href="portfolio-details.html" title="More Details">Books 3</a></h4>
-                <p>Lorem ipsum, dolor sit amet consectetur</p>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-        </div><!-- End Portfolio Container -->
-
+          <?php endforeach ?>
+        </div>
       </div>
-
-    </div>
   </section><!-- End Portfolio Section -->
 
 
@@ -222,89 +101,42 @@
     <div class="container" data-aos="fade-up">
 
       <div class="section-header">
-        <h2>Recent Blog Posts</h2>
-        <p>Consequatur libero assumenda est voluptatem est quidem illum et officia imilique qui vel architecto accusamus fugit aut qui distinctio</p>
+        <a href="<?= base_url('artikel'); ?>">
+          <h2>Artikel Terbaru</h2>
+        </a>
+
       </div>
 
       <div class="row gy-4">
 
-        <div class="col-xl-4 col-md-6">
-          <article>
+        <?php foreach ($data_artikel as $article) : ?>
+          <div class="col-xl-4 col-md-6">
+            <article>
 
-            <div class="post-img">
-              <img src="<?= base_url() ?>/assets-impact/img/blog/blog-1.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Politics</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Dolorum optio tempore voluptas dignissimos</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="<?= base_url() ?>/assets-impact/img/blog/blog-author.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author">Maria Doe</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Jan 1, 2022</time>
-                </p>
+              <div class="post-img">
+                <?php echo get_thumb_articles($article->id); ?>
+                <!-- <img src="<?= base_url('assets/uploads/artikel/' . $article->gambar); ?>" alt="" class="img-fluid" width="100%"> -->
               </div>
-            </div>
 
-          </article>
-        </div><!-- End post list item -->
+              <p class="post-category"><?= $article->kategori; ?></p>
 
-        <div class="col-xl-4 col-md-6">
-          <article>
+              <h2 class="title">
+                <a href="<?= base_url('artikel/detail/' . $article->id); ?>"><?= $article->judul; ?></a>
+              </h2>
 
-            <div class="post-img">
-              <img src="<?= base_url() ?>/assets-impact/img/blog/blog-2.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Sports</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Nisi magni odit consequatur autem nulla dolorem</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="<?= base_url() ?>/assets-impact/img/blog/blog-author-2.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author">Allisa Mayer</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Jun 5, 2022</time>
-                </p>
+              <div class="d-flex align-items-center">
+                <img src="<?= base_url('assets/img/profile/default.png'); ?>" alt="" class="img-fluid post-author-img flex-shrink-0">
+                <div class="post-meta">
+                  <p class="post-author-list">Admin</p>
+                  <p class="post-date">
+                    <time datetime="2022-01-01"><?= $article->tanggal; ?></time>
+                  </p>
+                </div>
               </div>
-            </div>
+            </article>
+          </div><!-- End post list item -->
+        <?php endforeach ?>
 
-          </article>
-        </div><!-- End post list item -->
-
-        <div class="col-xl-4 col-md-6">
-          <article>
-
-            <div class="post-img">
-              <img src="<?= base_url() ?>/assets-impact/img/blog/blog-3.jpg" alt="" class="img-fluid">
-            </div>
-
-            <p class="post-category">Entertainment</p>
-
-            <h2 class="title">
-              <a href="blog-details.html">Possimus soluta ut id suscipit ea ut in quo quia et soluta</a>
-            </h2>
-
-            <div class="d-flex align-items-center">
-              <img src="<?= base_url() ?>/assets-impact/img/blog/blog-author-3.jpg" alt="" class="img-fluid post-author-img flex-shrink-0">
-              <div class="post-meta">
-                <p class="post-author">Mark Dower</p>
-                <p class="post-date">
-                  <time datetime="2022-01-01">Jun 22, 2022</time>
-                </p>
-              </div>
-            </div>
-
-          </article>
-        </div><!-- End post list item -->
 
       </div><!-- End recent posts list -->
 

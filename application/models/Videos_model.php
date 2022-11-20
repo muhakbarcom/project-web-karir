@@ -20,6 +20,13 @@ class Videos_model extends CI_Model
     return $this->db->get($this->table)->result();
   }
 
+  function get_videos_limit($limit)
+  {
+    $this->db->order_by($this->id, $this->order);
+    $this->db->limit($limit);
+    return $this->db->get($this->table)->result();
+  }
+
   // get data by id
   function get_by_id($id)
   {

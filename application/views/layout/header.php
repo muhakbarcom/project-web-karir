@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title><?= $title; ?> - Sistem Karir</title>
+  <title><?= ucfirst($title); ?> - <?= ucfirst($titleapp); ?></title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -30,6 +30,16 @@
   <!-- Template Main CSS File -->
   <link href="<?= base_url() ?>/assets-impact/css/main.css" rel="stylesheet">
 
+  <style>
+    .note-group-image-url {
+      display: none;
+    }
+
+
+    .note-modal-footer {
+      display: none;
+    }
+  </style>
 
   <!-- =======================================================
   * Template Name: Impact - v1.1.1
@@ -63,7 +73,7 @@
       <a href="<?= base_url() ?>" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="<?= base_url() ?>/assets-impact/img/logo.png" alt=""> -->
-        <h1><?= $titleapp; ?><span>.</span></h1>
+        <h1 style="font-size: 26px;"><?= $titleapp; ?><span>.</span></h1>
       </a>
       <nav id="navbar" class="navbar">
         <ul>

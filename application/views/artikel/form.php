@@ -1,8 +1,8 @@
 <main id="main" class="mt-5">
   <div class="container">
     <div class="row">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
+      <div class="col-md-2"></div>
+      <div class="col-md-7">
         <div class="card">
           <div class="card-header">
             <h3><?= $title; ?></h3>
@@ -27,9 +27,8 @@
 
             </div>
 
-
             <div class="form-group mb-3">
-              <textarea name="isi" id="isi" class="form-control" required value="<?= $isi; ?>" rows="10"><?= $isi; ?></textarea>
+              <textarea name="isi" id="isi" class="form-control summernote" required><?= $isi; ?></textarea>
               <div id="emailHelp" class="form-text text-danger"><?php echo form_error('isi'); ?></div>
 
             </div>
@@ -38,7 +37,7 @@
             <div class="form-group mb-3">
               <label for="">Kategori</label> <br />
               <select name="kategori" id="kategori" class="form-control" required>
-                <option>-- Pilih Kategori --</option>
+                <option value="">-- Pilih Kategori --</option>
                 <?php foreach ($kategori_artikel as $value) : ?>
                   <option value="<?= $value; ?>" <?= $value == $kategori ? 'selected' : ''; ?>><?= $value; ?></option>
                 <?php endforeach ?>
@@ -55,17 +54,7 @@
         </div>
       </div>
       <div class="col-md-3">
-        <div class="form-group mb-3">
-          <label for="">Thumbnail</label> <br />
-          <input type="file" name="gambar" id="gambar" class="form-control" value="<?= $gambar; ?>">
-          <div id="emailHelp" class="form-text text-danger"><?php echo form_error('gambar'); ?></div>
-        </div>
-        <div class="form-group mb-3">
-          <div id="image-preview"></div>
-          <?php if ($gambar) : ?>
-            <img src="<?= base_url('assets/uploads/artikel/' . $gambar); ?>" alt="" width="100%">
-          <?php endif ?>
-        </div>
+
         <?php echo form_close(); ?>
       </div>
     </div>
@@ -76,15 +65,15 @@
 </section>
 <script>
   // image preview before upload
-  function previewImage() {
-    document.getElementById("image-preview").style.display = "block";
-    var oFReader = new FileReader();
-    oFReader.readAsDataURL(document.getElementById("gambar").files[0]);
+  // function previewImage() {
+  //   document.getElementById("image-preview").style.display = "block";
+  //   var oFReader = new FileReader();
+  //   oFReader.readAsDataURL(document.getElementById("gambar").files[0]);
 
-    oFReader.onload = function(oFREvent) {
-      document.getElementById("image-preview").innerHTML = '<img src="' + oFREvent.target.result + '" style="width: 100%; height: 100%;">';
-    };
-  };
+  //   oFReader.onload = function(oFREvent) {
+  //     document.getElementById("image-preview").innerHTML = '<img src="' + oFREvent.target.result + '" style="width: 100%; height: 100%;">';
+  //   };
+  // };
 
-  document.getElementById("gambar").addEventListener("change", previewImage);
+  // document.getElementById("gambar").addEventListener("change", previewImage);
 </script>

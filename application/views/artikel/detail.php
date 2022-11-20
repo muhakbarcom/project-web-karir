@@ -9,7 +9,7 @@
          <article class="blog-details">
 
            <div class="post-img">
-             <img src="<?= base_url(); ?>/assets/uploads/artikel/<?= $artikel->gambar; ?>" alt="" class="img-fluid" width="100%">
+             <!-- <img src="<?= base_url(); ?>/assets/uploads/artikel/<?= $artikel->gambar; ?>" alt="" class="img-fluid" width="100%"> -->
            </div>
 
            <h2 class="title"><?= $artikel->judul; ?></h2>
@@ -66,7 +66,8 @@
              <div class="mt-3">
                <?php foreach ($articles as $article) : ?>
                  <div class="post-item mt-3">
-                   <img src="<?= base_url(); ?>/assets/uploads/artikel/<?= $article->gambar; ?>" alt="">
+                   <?php echo get_thumb_articles($article->id); ?>
+                   <!-- <img src="<?= base_url(); ?>/assets/uploads/artikel/<?= $article->gambar; ?>" alt=""> -->
                    <div>
                      <h4><a href="<?= base_url('artikel/detail/' . $article->id); ?>"><?= $article->judul; ?></a></h4>
                      <time datetime="2020-01-01"><?= $article->tanggal; ?></time>

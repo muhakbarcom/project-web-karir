@@ -532,7 +532,7 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
-$config['title'] = 'Web Karir';
+$config['title'] = 'Career Information';
 $config['desc'] = 'Web Karir merupakan sistem yang memberikan informasi tentang karir';
 $config['socmed'] = array(
   'facebook' => 'https://www.facebook.com/',
