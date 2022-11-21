@@ -22,7 +22,7 @@
                 <input type="password" class="form-control" id="password" name="password">
                 <div id="emailHelp" class="form-text text-danger"><?php echo form_error('password'); ?></div>
               </div>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
             </form>
           </div>
           <div class="row mt-2">

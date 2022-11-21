@@ -47,7 +47,7 @@
                 <input type="password" class="form-control" id="password_confirm" name="password_confirm" required>
                 <div id="emailHelp" class="form-text text-danger"><?php echo form_error('password_confirm'); ?></div>
               </div>
-              <button type="submit" class="btn btn-success">Daftar</button>
+              <button type="submit" class="btn btn-primary">Daftar</button>
             </form>
           </div>
           <div class="row mt-2">
