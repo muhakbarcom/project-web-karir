@@ -23,7 +23,7 @@ class Auth extends CI_Controller
       'socmed' => config_item('socmed'),
     );
     $this->load->view('layout/header', $data);
-    $this->load->view('Auth/login', $data);
+    $this->load->view('auth/login', $data);
     $this->load->view('layout/footer', $data);
   }
 
@@ -97,7 +97,7 @@ class Auth extends CI_Controller
 
 
     $this->load->view('layout/header', $data);
-    $this->load->view('Auth/register', $data);
+    $this->load->view('auth/register', $data);
     $this->load->view('layout/footer', $data);
   }
 
