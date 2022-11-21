@@ -242,7 +242,7 @@ class Artikel extends CI_Controller
   public function detail($id)
   {
     $artikel = $this->artikel_model->get_by_id($id);
-    $articles = $this->artikel_model->get_all();
+    $articles = $this->artikel_model->get_artikel_limit(5);
 
     $data = array(
       'title' => 'Detail ' . $this->module,
