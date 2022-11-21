@@ -93,6 +93,7 @@
             <li><a href="<?= base_url('Auth/login?reff=konsultasi'); ?>" class="<?php echo ($title == "Konsultasi") ? "active" : ""; ?>">Konsultasi</a></li>
           <?php } ?>
           <!-- end konsultasi -->
+          <li><a href="<?= base_url('tmb'); ?>" class="<?php echo ($title == "Tes Minat Bakat") ? "active" : ""; ?>">Tes Minat Bakat</a></li>
 
           <!-- if login and is admin -->
           <?php if ($this->akbr_auth->is_logged_in() && $this->akbr_auth->is_admin()) : ?>
@@ -100,6 +101,7 @@
               <ul>
                 <li><a href="<?= base_url('Artikel/list'); ?>">Kelola Artikel</a></li>
                 <li><a href="<?= base_url('Videos/list'); ?>">Kelola Video</a></li>
+                <li><a href="<?= base_url('Tmb/list'); ?>">Kelola Link Tes Minat Bakat</a></li>
                 <li><a href="<?= base_url('Users'); ?>">Kelola User</a></li>
               </ul>
             </li>

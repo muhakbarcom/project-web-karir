@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 20, 2022 at 12:36 PM
+-- Generation Time: Nov 21, 2022 at 05:54 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -86,6 +86,68 @@ CREATE TABLE `roles` (
 INSERT INTO `roles` (`id`, `name`) VALUES
 (1, 'admin'),
 (2, 'members');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tmb`
+--
+
+CREATE TABLE `tmb` (
+  `id` int(11) NOT NULL,
+  `tmb_name` varchar(250) NOT NULL,
+  `tmb_url` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tmb`
+--
+
+INSERT INTO `tmb` (`id`, `tmb_name`, `tmb_url`) VALUES
+(1, 'Tes Minat Bakat ABC', 'https://forms.gle/cffDKTmivdpigsus7'),
+(3, 'Tes Minat Bakat XYZ', 'https://forms.gle/cffDKTmivdpigsus7'),
+(4, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(5, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(6, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(7, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(8, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(9, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(10, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(11, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(12, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(13, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(14, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(15, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(16, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(17, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(18, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(19, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(20, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(21, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(22, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(23, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(24, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(25, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(26, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(27, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(28, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(29, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(30, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(31, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(32, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(33, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(34, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(35, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(36, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(37, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(38, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(39, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(40, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(41, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(42, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(43, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(44, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7'),
+(45, 'Tes Minat Bakat MNO', 'https://forms.gle/cffDKTmivdpigsus7');
 
 -- --------------------------------------------------------
 
@@ -207,6 +269,12 @@ ALTER TABLE `roles`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tmb`
+--
+ALTER TABLE `tmb`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -233,6 +301,12 @@ ALTER TABLE `artikel`
 --
 ALTER TABLE `roles`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `tmb`
+--
+ALTER TABLE `tmb`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `users`
