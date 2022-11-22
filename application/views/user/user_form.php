@@ -8,7 +8,7 @@
             <h3>Kelola User</h3>
           </div>
           <div class="card-body">
-          <?php if ($this->session->flashdata('error')) : ?>
+            <?php if ($this->session->flashdata('error')) : ?>
               <div class="alert alert-danger" role="alert">
                 <?= $this->session->flashdata('error'); ?>
               </div>
@@ -16,7 +16,6 @@
               <div class="alert alert-success" role="alert">
                 <?= $this->session->flashdata('success'); ?>
               </div>
-            <?php endif ?>
             <?php endif ?>
             <?php echo form_open($action); ?>
 
