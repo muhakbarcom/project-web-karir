@@ -26,3 +26,11 @@ function get_thumb_articles($id_articles)
 {
   return get_images_from_articles($id_articles)[0];
 }
+
+function get_user_fullname($id_user)
+{
+  $CI = &get_instance();
+  $CI->load->model('Akbr_users_model');
+  $user = $CI->Akbr_users_model->get_by_id($id_user);
+  return $user->first_name . ' ' . $user->last_name;
+}

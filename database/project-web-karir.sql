@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2022 at 05:54 AM
+-- Generation Time: Nov 22, 2022 at 03:44 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -67,6 +67,64 @@ INSERT INTO `artikel` (`id`, `judul`, `tanggal`, `kategori`, `isi`) VALUES
 (45, '4 PTN di Jawa Timur Siap Buka Jurusan Kedokteran Tahun 2023', '2022-11-20', 'ptn', '<p><img src=\"http://localhost/project-web-karir/assets/uploads/artikel/a2557a7b2e94197ff767970b67041697.png\" xss=removed width=\"100%\" data-file-name=\"a2557a7b2e94197ff767970b67041697.png\"></p><p>KOMPAS.com - Di Jawa Timur ada 4 Perguruan Tinggi Negeri (PTN) yang siap membuka jurusan Kedokteran pada tahun 2023. Tentu siswa SMA pasti suka mendapat kabar ini, karena pilihan kampus yang membuka jurusan kedokteran semakin banyak di Jawa Timur. Keempat PTN tersebut adalah Universitas Negeri Malang (UM), lalu Universitas Pembangunan Nasional (UPN) Veteran Jawa Timur, Institut Teknologi Sepuluh Nopember Surabaya (ITS) dan Universitas Negeri Surabaya (Unesa).</p><p>Sebelumya, untuk PTN di Jawa Timur yang memiliki jurusan kedokteran sudah cukup banyak. Contohnya Universitas Brawijaya, Universitas Airlangga, Universitas Jember dan lainnya. Seperti apa persiapan masing-masing jurusan kedokteran di 4 PTN ini? 1. Institut Teknologi Sepuluh Nopember (ITS) ITS kini sudah membuka lowongan dosen jurusan Pendidikan Dokter dan laboran.</p><p>Lowongan ini, bisa dilihat calon kandidat melalui laman https://rekrutmen-dosen.its.ac.id/ Keseriusan ITS ikut terjun ke bidang kesehatan, sebelumnya dibuktikan dengan pernyataan Rektor ITS Prof. Mochamad Ashari saat membuka prodi S1 Teknologi Kedokteran.  Lalu kini membuka jurusan kedokteran, yang diperkirakan siap pada tahun 2023. Pembukaan jurusan ini berdasarkan spirit rektor pertama ITS yang merupakan seorang dokter.</p>'),
 (46, '4 PTN di Jawa Timur Siap Buka Jurusan Kedokteran Tahun 2023', '2022-11-20', 'ptn', '<p><img src=\"http://localhost/project-web-karir/assets/uploads/artikel/a2557a7b2e94197ff767970b67041697.png\" xss=removed width=\"100%\" data-file-name=\"a2557a7b2e94197ff767970b67041697.png\"></p><p>KOMPAS.com - Di Jawa Timur ada 4 Perguruan Tinggi Negeri (PTN) yang siap membuka jurusan Kedokteran pada tahun 2023. Tentu siswa SMA pasti suka mendapat kabar ini, karena pilihan kampus yang membuka jurusan kedokteran semakin banyak di Jawa Timur. Keempat PTN tersebut adalah Universitas Negeri Malang (UM), lalu Universitas Pembangunan Nasional (UPN) Veteran Jawa Timur, Institut Teknologi Sepuluh Nopember Surabaya (ITS) dan Universitas Negeri Surabaya (Unesa).</p><p>Sebelumya, untuk PTN di Jawa Timur yang memiliki jurusan kedokteran sudah cukup banyak. Contohnya Universitas Brawijaya, Universitas Airlangga, Universitas Jember dan lainnya. Seperti apa persiapan masing-masing jurusan kedokteran di 4 PTN ini? 1. Institut Teknologi Sepuluh Nopember (ITS) ITS kini sudah membuka lowongan dosen jurusan Pendidikan Dokter dan laboran.</p><p>Lowongan ini, bisa dilihat calon kandidat melalui laman https://rekrutmen-dosen.its.ac.id/ Keseriusan ITS ikut terjun ke bidang kesehatan, sebelumnya dibuktikan dengan pernyataan Rektor ITS Prof. Mochamad Ashari saat membuka prodi S1 Teknologi Kedokteran.  Lalu kini membuka jurusan kedokteran, yang diperkirakan siap pada tahun 2023. Pembukaan jurusan ini berdasarkan spirit rektor pertama ITS yang merupakan seorang dokter.</p>'),
 (47, '4 PTN di Jawa Timur Siap Buka Jurusan Kedokteran Tahun 2023', '2022-11-20', 'ptn', '<p><img src=\"http://localhost/project-web-karir/assets/uploads/artikel/a2557a7b2e94197ff767970b67041697.png\" xss=removed width=\"100%\" data-file-name=\"a2557a7b2e94197ff767970b67041697.png\"></p><p>KOMPAS.com - Di Jawa Timur ada 4 Perguruan Tinggi Negeri (PTN) yang siap membuka jurusan Kedokteran pada tahun 2023. Tentu siswa SMA pasti suka mendapat kabar ini, karena pilihan kampus yang membuka jurusan kedokteran semakin banyak di Jawa Timur. Keempat PTN tersebut adalah Universitas Negeri Malang (UM), lalu Universitas Pembangunan Nasional (UPN) Veteran Jawa Timur, Institut Teknologi Sepuluh Nopember Surabaya (ITS) dan Universitas Negeri Surabaya (Unesa).</p><p>Sebelumya, untuk PTN di Jawa Timur yang memiliki jurusan kedokteran sudah cukup banyak. Contohnya Universitas Brawijaya, Universitas Airlangga, Universitas Jember dan lainnya. Seperti apa persiapan masing-masing jurusan kedokteran di 4 PTN ini? 1. Institut Teknologi Sepuluh Nopember (ITS) ITS kini sudah membuka lowongan dosen jurusan Pendidikan Dokter dan laboran.</p><p>Lowongan ini, bisa dilihat calon kandidat melalui laman https://rekrutmen-dosen.its.ac.id/ Keseriusan ITS ikut terjun ke bidang kesehatan, sebelumnya dibuktikan dengan pernyataan Rektor ITS Prof. Mochamad Ashari saat membuka prodi S1 Teknologi Kedokteran.  Lalu kini membuka jurusan kedokteran, yang diperkirakan siap pada tahun 2023. Pembukaan jurusan ini berdasarkan spirit rektor pertama ITS yang merupakan seorang dokter.</p>');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `konsultasi`
+--
+
+CREATE TABLE `konsultasi` (
+  `id` int(11) NOT NULL,
+  `from_id` int(11) NOT NULL,
+  `created_at` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `konsultasi`
+--
+
+INSERT INTO `konsultasi` (`id`, `from_id`, `created_at`) VALUES
+(3, 5, '2022-11-22'),
+(4, 6, '2022-11-22');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `konsultasi_detail`
+--
+
+CREATE TABLE `konsultasi_detail` (
+  `id` int(11) NOT NULL,
+  `konsultasi_id` int(11) NOT NULL,
+  `from_id` int(11) NOT NULL,
+  `text` text NOT NULL,
+  `created_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `konsultasi_detail`
+--
+
+INSERT INTO `konsultasi_detail` (`id`, `konsultasi_id`, `from_id`, `text`, `created_at`) VALUES
+(2, 3, 5, 'ansdas', '2022-11-22 14:32:49'),
+(3, 3, 5, 'abc', '2022-11-22 15:02:56'),
+(4, 3, 5, 'abc', '2022-11-22 15:03:35'),
+(5, 3, 5, 'w', '2022-11-22 15:03:44'),
+(6, 3, 5, 'iyap', '2022-11-22 15:04:08'),
+(7, 3, 5, 'asd', '2022-11-22 15:04:35'),
+(8, 3, 5, 'asd', '2022-11-22 15:04:38'),
+(9, 3, 5, 'asjdnkas', '2022-11-22 15:04:53'),
+(10, 3, 5, 'kjasndkjasd', '2022-11-22 15:04:55'),
+(11, 3, 5, 'kjasndkjasd', '2022-11-22 15:04:56'),
+(12, 3, 5, 'akjsdnkjasd', '2022-11-22 15:04:57'),
+(13, 4, 6, 'asdasd', '2022-11-22 15:23:22'),
+(14, 3, 4, 'tes admin', '2022-11-22 15:41:14'),
+(15, 3, 4, 'tes', '2022-11-22 15:41:39'),
+(16, 4, 4, 'admin', '2022-11-22 15:41:45'),
+(17, 3, 4, 'asdasd', '2022-11-22 15:42:46'),
+(18, 4, 4, 'tes', '2022-11-22 15:42:51'),
+(19, 3, 5, 'iya', '2022-11-22 15:43:04');
 
 -- --------------------------------------------------------
 
@@ -263,6 +321,18 @@ ALTER TABLE `artikel`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `konsultasi`
+--
+ALTER TABLE `konsultasi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `konsultasi_detail`
+--
+ALTER TABLE `konsultasi_detail`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `roles`
 --
 ALTER TABLE `roles`
@@ -295,6 +365,18 @@ ALTER TABLE `videos`
 --
 ALTER TABLE `artikel`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
+--
+-- AUTO_INCREMENT for table `konsultasi`
+--
+ALTER TABLE `konsultasi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `konsultasi_detail`
+--
+ALTER TABLE `konsultasi_detail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `roles`

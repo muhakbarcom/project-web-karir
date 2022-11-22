@@ -111,7 +111,7 @@
           <?php
           if ($this->akbr_auth->is_logged_in()) {
           ?>
-            <li><a style="background-color: #00796b ;" href="<?= base_url('Profile'); ?>" class="rounded px-3 py-1"><i class="bi bi-person-circle"></i> &nbsp; <?= $this->akbr_auth->get_user_data(); ?></a> </li>
+            <li><a style="background-color: #235bb5 ;" href="<?= base_url('Profile'); ?>" class="rounded px-3 py-1"><i class="bi bi-person-circle"></i> &nbsp; <?= $this->akbr_auth->get_user_data(); ?></a> </li>
             <li><a class="btn btn-danger  text-light px-3 py-1" href="<?= base_url('Auth/logout'); ?>">Logout</a></li>
           <?php } else { ?>
             <li><a class="btn btn-dark text-light px-3 py-1" href="<?= base_url('Auth'); ?>">Login</a></li>
