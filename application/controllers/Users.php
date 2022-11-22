@@ -27,7 +27,7 @@ class Users extends CI_Controller
       'users' => $users,
     );
     $this->load->view('layout/header', $data);
-    $this->load->view('User/index', $data);
+    $this->load->view('user/index', $data);
     $this->load->view('layout/footer', $data);
   }
 
@@ -51,7 +51,7 @@ class Users extends CI_Controller
 
 
     $this->load->view('layout/header', $data);
-    $this->load->view('User/user_form', $data);
+    $this->load->view('user/user_form', $data);
     $this->load->view('layout/footer', $data);
   }
 
@@ -113,7 +113,7 @@ class Users extends CI_Controller
     );
 
     $this->load->view('layout/header', $data);
-    $this->load->view('User/user_form_edit', $data);
+    $this->load->view('user/user_form_edit', $data);
     $this->load->view('layout/footer', $data);
   }
 
