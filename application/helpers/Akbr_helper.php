@@ -34,3 +34,31 @@ function get_user_fullname($id_user)
   $user = $CI->Akbr_users_model->get_by_id($id_user);
   return $user->first_name . ' ' . $user->last_name;
 }
+
+function get_latest_chat($id_konsultasi)
+{
+  $CI = &get_instance();
+  $CI->db->where('konsultasi_id', $id_konsultasi);
+  $CI->db->order_by('id', 'DESC');
+  $CI->db->limit(1);
+  $query = $CI->db->get('konsultasi_detail');
+  return $query->row()->text;
+}
+function get_latest_read_status($id_konsultasi)
+{
+  $CI = &get_instance();
+  $CI->db->where('konsultasi_id', $id_konsultasi);
+  $CI->db->order_by('id', 'DESC');
+  $CI->db->limit(1);
+  $query = $CI->db->get('konsultasi_detail');
+  return $query->row()->is_read;
+}
+
+function get_total_unread_msg($id_konsultasi)
+{
+  $CI = &get_instance();
+  $CI->db->where('konsultasi_id', $id_konsultasi);
+  $CI->db->order_by('id', 'DESC');
+  $query = $CI->db->get('konsultasi_detail');
+  return $query->num_rows();
+}

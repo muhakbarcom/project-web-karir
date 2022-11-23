@@ -113,6 +113,7 @@ class Konsultasi extends CI_Controller
     $data_konsultasi = $this->Konsultasi_model->get_all();
     if ($id_konsultasi != NULL) {
       $data_konsultasi_detail = $this->Konsultasi_model->get_detail($id_konsultasi);
+      $this->Konsultasi_model->read($id_konsultasi);
     } else {
       $data_konsultasi_detail = NULL;
     }

@@ -228,12 +228,12 @@
         <div class="inbox_chat">
           <?php foreach ($data_konsultasi as $value) : ?>
             <a href="<?= base_url('Konsultasi/admin/' . $value->id); ?>">
-              <div class="chat_list <?= ($value->id == $id_konsultasi) ? 'active_chat' : ''; ?>">
+              <div class="chat_list <?= (get_latest_read_status($value->id) == 0) ? 'fw-bold' : ''; ?> <?= ($value->id == $id_konsultasi) ? 'active_chat' : ''; ?>">
                 <div class="chat_people">
                   <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
                   <div class="chat_ib">
-                    <h5><?= get_user_fullname($value->from_id); ?> <span class="chat_date"><?= $value->created_at; ?></span></h5>
-                    <p>lates chat</p>
+                    <h5 class="<?= (get_latest_read_status($value->id) == 0) ? 'fw-bold' : ''; ?>"><?= get_user_fullname($value->from_id); ?> <span class="chat_date"><?= $value->created_at; ?></span> <?= (get_latest_read_status($value->id) == 0) ? "(" . get_total_unread_msg($value->id) . ")" : ''; ?></h5>
+                    <p><?= get_latest_chat($value->id); ?></p>
                   </div>
                 </div>
               </div>

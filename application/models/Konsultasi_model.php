@@ -26,6 +26,12 @@ class Konsultasi_model extends CI_Model
     return $this->db->get('konsultasi_detail')->result();
   }
 
+  function read($id_konsultasi)
+  {
+    $this->db->where('konsultasi_id', $id_konsultasi);
+    $this->db->update('konsultasi_detail', array('is_read' => 1));
+  }
+
   function get_id_konsultasi($id_user)
   {
     $this->db->select('id');
