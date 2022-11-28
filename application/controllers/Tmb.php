@@ -11,6 +11,7 @@ class Tmb extends CI_Controller
   public function __construct()
   {
     parent::__construct();
+    redirect('https://karakterkarir.rf.gd/home');
     $this->load->model('tmb_model');
     $this->className = $this->router->fetch_class();
   }
