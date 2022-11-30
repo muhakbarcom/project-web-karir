@@ -47,7 +47,7 @@
         <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="500">
           <div class="icon-box">
             <div class="icon"><i class="bi bi-pencil"></i></div>
-            <h4 class="title"><a href="<?= base_url('tmb'); ?>" class="stretched-link">Tes Minat Bakat</a></h4>
+            <h4 class="title"><a href="https://karakterkarir.rf.gd/home" target="_BLANK" class="stretched-link">Tes Minat Bakat</a></h4>
           </div>
         </div>
         <!--End Icon Box -->

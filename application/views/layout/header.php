@@ -93,7 +93,7 @@
             <li><a href="<?= base_url('Auth/login?reff=konsultasi'); ?>" class="<?php echo ($title == "Konsultasi") ? "active" : ""; ?>">Konsultasi</a></li>
           <?php } ?>
           <!-- end konsultasi -->
-          <li><a href="<?= base_url('tmb'); ?>" class="<?php echo ($title == "Tes Minat Bakat") ? "active" : ""; ?>">Tes Minat Bakat</a></li>
+          <li><a href="https://karakterkarir.rf.gd/home" target="_BLANK" class="<?php echo ($title == "Tes Minat Bakat") ? "active" : ""; ?>">Tes Minat Bakat</a></li>
 
           <!-- if login and is admin -->
           <?php if ($this->akbr_auth->is_logged_in() && $this->akbr_auth->is_admin()) : ?>
