@@ -11,62 +11,75 @@ class Tmb extends CI_Controller
   public function __construct()
   {
     parent::__construct();
-    redirect('https://karakterkarir.rf.gd/home');
+    // redirect('https://karakterkarir.rf.gd/home');
     $this->load->model('tmb_model');
     $this->className = $this->router->fetch_class();
   }
 
 
-  public function index()
+  // public function index()
+  // {
+  //   $this->load->library('pagination');
+
+  //   //konfigurasi pagination
+  //   $config['base_url'] = site_url('tmb/index'); //site url
+  //   $config['total_rows'] = $this->db->count_all('tmb'); //total row
+  //   $config['per_page'] = 6;  //show record per halaman
+  //   $config["uri_segment"] = 3;  // uri parameter
+  //   $choice = $config["total_rows"] / $config["per_page"];
+  //   $config["num_links"] = floor($choice);
+
+  //   // Membuat Style pagination untuk BootStrap v4
+  //   $config['first_link']       = 'First';
+  //   $config['last_link']        = 'Last';
+  //   $config['next_link']        = '>>';
+  //   $config['prev_link']        = '<<';
+  //   $config['full_tag_open']    = '<div class="blog-pagination"><ul class="justify-content-center">';
+  //   $config['full_tag_close']   = '</ul></div>';
+  //   $config['num_tag_open']     = '<li><a href="#">';
+  //   $config['num_tag_close']    = '</a></li>';
+  //   $config['cur_tag_open']     = '<li class="active"><a href="#">';
+  //   $config['cur_tag_close']    = '</a></li>';
+  //   $config['next_tag_open']    = '<li>';
+  //   $config['next_tagl_close']  = '</li>';
+  //   $config['prev_tag_open']    = '<li>';
+  //   $config['prev_tagl_close']  = '</li>';
+  //   $config['first_tag_open']   = '<li>';
+  //   $config['first_tagl_close'] = '</li>';
+  //   $config['last_tag_open']    = '<li>';
+  //   $config['last_tagl_close']  = '</li>';
+
+  //   $this->pagination->initialize($config);
+
+  //   $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
+  //   $search_data = $this->input->get('search');
+  //   $limit = $config['per_page'];
+  //   $start = $data['page'];
+  //   $tmb = $this->tmb_model->get_tmb($limit, $start, $search_data);
+  //   $data = array(
+  //     'title' => $this->module,
+  //     'titleapp' => config_item('title'),
+  //     'descapp' => config_item('desc'),
+  //     'socmed' => config_item('socmed'),
+  //     'tmb' => $tmb,
+  //     'search_data' => set_value('search', $search_data),
+  //   );
+  //   $data['pagination'] = $this->pagination->create_links();
+  //   $this->load->view('layout/header', $data);
+  //   $this->load->view($this->module . '/index', $data);
+  //   $this->load->view('layout/footer', $data);
+  // }
+
+  function index()
   {
-    $this->load->library('pagination');
-
-    //konfigurasi pagination
-    $config['base_url'] = site_url('tmb/index'); //site url
-    $config['total_rows'] = $this->db->count_all('tmb'); //total row
-    $config['per_page'] = 6;  //show record per halaman
-    $config["uri_segment"] = 3;  // uri parameter
-    $choice = $config["total_rows"] / $config["per_page"];
-    $config["num_links"] = floor($choice);
-
-    // Membuat Style pagination untuk BootStrap v4
-    $config['first_link']       = 'First';
-    $config['last_link']        = 'Last';
-    $config['next_link']        = '>>';
-    $config['prev_link']        = '<<';
-    $config['full_tag_open']    = '<div class="blog-pagination"><ul class="justify-content-center">';
-    $config['full_tag_close']   = '</ul></div>';
-    $config['num_tag_open']     = '<li><a href="#">';
-    $config['num_tag_close']    = '</a></li>';
-    $config['cur_tag_open']     = '<li class="active"><a href="#">';
-    $config['cur_tag_close']    = '</a></li>';
-    $config['next_tag_open']    = '<li>';
-    $config['next_tagl_close']  = '</li>';
-    $config['prev_tag_open']    = '<li>';
-    $config['prev_tagl_close']  = '</li>';
-    $config['first_tag_open']   = '<li>';
-    $config['first_tagl_close'] = '</li>';
-    $config['last_tag_open']    = '<li>';
-    $config['last_tagl_close']  = '</li>';
-
-    $this->pagination->initialize($config);
-
-    $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
-    $search_data = $this->input->get('search');
-    $limit = $config['per_page'];
-    $start = $data['page'];
-    $tmb = $this->tmb_model->get_tmb($limit, $start, $search_data);
     $data = array(
       'title' => $this->module,
       'titleapp' => config_item('title'),
       'descapp' => config_item('desc'),
       'socmed' => config_item('socmed'),
-      'tmb' => $tmb,
-      'search_data' => set_value('search', $search_data),
     );
-    $data['pagination'] = $this->pagination->create_links();
     $this->load->view('layout/header', $data);
-    $this->load->view($this->module . '/index', $data);
+    $this->load->view($this->module . '/tesminat', $data);
     $this->load->view('layout/footer', $data);
   }
 
